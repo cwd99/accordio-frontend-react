@@ -37,7 +37,7 @@ class Navigation extends React.Component {
                 <ul className='nav-alt-color'>
                     <li><a className='logo' href='/'>ACCORDIO</a></li>
                     <li><a className='push' href='/search'>Search</a></li>
-                    <li><a href='/sign-in'>Sign in</a></li>
+                    <li><a href='/sign-in'>Login</a></li>
                     <li><a href='/create-account'><button className='get-started-btn'>Get Started</button></a></li>
                 </ul>
             )
