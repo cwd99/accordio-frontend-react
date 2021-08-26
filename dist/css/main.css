@@ -1,0 +1,254 @@
+.nav-alt-color {
+  margin: 0 0 1px 0;
+  display: flex;
+  background-color: white;
+  box-shadow: 0px 1px white;
+}
+
+.nav-alt-color > li {
+  list-style-type: none;
+  padding: 5vh 0 5vh 5vw;
+}
+
+.nav-alt-color > li > a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #0800aa;
+}
+
+.nav-main {
+  margin: 0 0 1px 0;
+  display: flex;
+  background-color: #0800aa;
+  box-shadow: 0px 1px #0800aa;
+}
+
+.nav-main > li {
+  list-style-type: none;
+  padding: 5vh 0 5vh 5vw;
+}
+
+.nav-main > li > a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.logo {
+  font-weight: bolder;
+}
+
+.push {
+  margin-left: 50vw;
+}
+
+.get-started-btn {
+  height: 5vh;
+  width: 8vw;
+  border-radius: 10px;
+  font-size: 1.3rem;
+  font-weight: bolder;
+  color: black;
+  background-color: #e29c8e;
+}
+
+.footer {
+  background-color: #0800aa;
+  color: white;
+}
+
+.footer-top {
+  display: flex;
+}
+
+.footer-top__logo {
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.footer-top > li {
+  list-style-type: none;
+  padding: 15vh 0 6vh 5vw;
+}
+
+.footer-top > li > a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer-midline {
+  width: 86%;
+}
+
+.footer-bottom {
+  display: flex;
+}
+
+.footer-bottom__push {
+  margin-left: 57vw;
+}
+
+.footer-bottom > li {
+  list-style-type: none;
+  padding: 8vh 0 15vh 5vw;
+}
+
+.footer-bottom > li > a {
+  text-decoration: none;
+  color: white;
+}
+
+.create-account {
+  background-color: #e7f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.create-account__form {
+  margin-top: 20vh;
+}
+
+.create-account__form-title {
+  font-size: 1.3rem;
+  font-weight: bolder;
+  margin-left: 16%;
+}
+
+.create-account__form-label {
+  font-weight: bolder;
+}
+
+.create-account__form-input {
+  margin: 2vh 0 2vh 0;
+  height: 5vh;
+  width: 20vw;
+  border-radius: 8px;
+  font-size: 1.1rem;
+}
+
+.create-account__form-input-eye {
+  margin-left: .5vw;
+  height: 1.8rem;
+}
+
+.create-account__form-terms-and-conditions {
+  display: grid;
+  grid-template-columns: 3vw 19vw;
+}
+
+.create-account__form-terms-and-conditions > input {
+  height: 3vw;
+  width: 3vh;
+}
+
+.create-account__form-terms-and-conditions > p {
+  margin-top: 1vh;
+}
+
+.create-account__form > button {
+  margin-bottom: 10vh;
+  margin-top: 2vh;
+  height: 6vh;
+  width: 20vw;
+  background-color: #0800aa;
+  color: white;
+  border-radius: 10px;
+  font-size: 1.1rem;
+}
+
+.create-account__password-lines > hr {
+  width: 15vw;
+  height: .25vh;
+  border-style: none;
+  background-color: #47ff47;
+  border-color: #47ff47;
+  border-radius: 10rem;
+}
+
+.create-account__password-lines > p {
+  margin-left: 15vw;
+}
+
+.email-verification {
+  display: flex;
+  background-color: #e7f9fa;
+}
+
+.email-verification__image > img {
+  height: 85vh;
+  width: auto;
+}
+
+.email-verification__text {
+  padding: 20vh 0 0 10vw;
+  font-size: 1.3rem;
+}
+
+.email-verification__text-almost-there {
+  font-weight: bolder;
+}
+
+.email-verification__text-check-email {
+  padding: 3vh 0 3vh 0;
+  font-size: 1.4rem;
+}
+
+.email-verification__text-resend {
+  font-size: 1rem;
+}
+
+.complete-account {
+  background-color: #e7f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.complete-account__form > h1 {
+  font-size: 1.4rem;
+  padding: 8vh 0 3vh 2vw;
+  width: 70%;
+  text-align: center;
+}
+
+.complete-account__form-input-text {
+  margin: 2vh 0 2vh 5vw;
+  height: 5vh;
+  width: 21vw;
+  border-radius: 0.5rem;
+}
+
+.complete-account__form-input-text-label {
+  margin: 0 0 0 5vw;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.complete-account__form-input-checkbox {
+  margin: 2vh 0 0 5vw;
+  height: 2.5vh;
+  width: 2vw;
+}
+
+.complete-account__form-input-checkbox-pronouns-label {
+  margin: 0 0 0 5vw;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.complete-account__form-input-checkbox-label {
+  font-size: 1.2rem;
+  padding: 0 0 0 1vw;
+}
+
+.complete-account__form-button {
+  margin: 0 0 18vh 5vw;
+  height: 5.5vh;
+  width: 21.5vw;
+  border-radius: .5rem;
+  background-color: #0800aa;
+  color: white;
+  font-size: 1.2rem;
+}
+/*# sourceMappingURL=main.css.map */
