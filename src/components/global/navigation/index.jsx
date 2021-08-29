@@ -35,7 +35,7 @@ class Navigation extends React.Component {
         if(this.state.registrationNavColor){
             return(
                 <ul className='nav-alt-color'>
-                    <li><a className='logo' href='/'>ACCORDIO</a></li>
+                    <li><a className='logo' href='/'>Accordio</a></li>
                     <li><a className='push' href='/search'>Search</a></li>
                     <li><a href='/login'>Login</a></li>
                     <li><a href='/create-account'><button className='get-started-btn'>Get Started</button></a></li>
@@ -44,10 +44,10 @@ class Navigation extends React.Component {
         } else {
             return (
                 <ul className='nav-main'>
-                    <li><a className='logo' href='/'>ACCORDIO</a></li>
-                    <li><a className='push' href='/search'>Search</a></li>
-                    <li><a href='/login'>Login</a></li>
-                    <li><a href='/create-account'><button className='get-started-btn'>Get Started</button></a></li>
+                    <li><a className='logo' href='/'>Accordio</a></li>
+                    <li><a className='push' href='/search'>Already a member?</a></li>
+                    {/* <li><a href='/login'>Login</a></li> */}
+                    {/* <li><a href='/create-account'><button className='get-started-btn'>Get Started</button></a></li> */}
                 </ul>
             )
         }
