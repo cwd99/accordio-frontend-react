@@ -31,7 +31,7 @@ class Navigation extends React.Component {
         console.log("asdf", currentPath) 
     }
 
-    returnCorrentNav = () => {
+    returnCurrentNav = () => {
         if(this.state.registrationNavColor){
             return(
                 <ul className='nav-alt-color'>
@@ -60,7 +60,7 @@ class Navigation extends React.Component {
     render(){
         return(
             <section>
-                { this.returnCorrentNav() }
+                { this.returnCurrentNav() }
             </section>
         )
     }
