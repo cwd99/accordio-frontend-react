@@ -110,6 +110,7 @@ export default function SignIn() {
           </Button>
 
           <br/>
+          <br/>
             <center>Or</center>
            <br/>
           <Button 
@@ -119,12 +120,14 @@ export default function SignIn() {
                 color="white"
                 className={classes.submit}
                 label="Continue with Google"
-                img src= "src/images/btn_google_signin_dark_focus_web@2x.png"
-                // primary={true} 
+                primary={true} 
                 // style={style} 
-                // onClick={(event) => this.handleClick(event)}/>
+                // onClick={(event) => this.handleClick(event)}/> 
             >
-                {/* img src= "src/images/btn_google_signin_dark_focus_web@2x.png" */}
+              <div class= "googleButton">
+                {/* <img src='public/Google.jpg' placeholder='google signin' /> */}
+                Google
+              </div>
             </Button> 
             
           <Grid container>
