@@ -15,7 +15,7 @@ const ImageUpload = () => {
         }
     }
     const imageUploadHandler = event => {
-        console.log(image)
+        console.dir(image)
         //send image to back end
     }
 
