@@ -10,7 +10,7 @@ import EmailVerification from './components/create-account/email-verification/in
 import CompleteAccount from './components/create-account/complete-account/index'
 import LoginPage from './components/login-page/index'
 
-import imageUpload from './components/edit-tool/image-upload'
+import ImageUpload from './components/edit-tool/ImageUpload'
 
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
         <Route exact path='/email-verification' component={EmailVerification} />
         <Route exact path='/complete-account' component={CompleteAccount} />
         <Route exact path='/login-page' component={LoginPage} />
-        <Route exact path='/edit-tool' component={imageUpload} />
+        <Route exact path='/edit-tool' component={ImageUpload} />
       </ BrowserRouter>
       <Footer />
     </div>
