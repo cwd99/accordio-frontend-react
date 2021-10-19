@@ -1,6 +1,12 @@
-import React, {useState} from 'react'
+import React from 'react'
 
-const ShowImage = () => {
+const ShowImage = (props) => {
 
+    return (
+        <div>
+            <img src={props.image} alt="Cover for your case study" />
+        </div>
+
+    )
 }
 export default ShowImage
