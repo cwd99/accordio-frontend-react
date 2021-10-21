@@ -12,6 +12,8 @@ import LoginPage from './components/login-page/index'
 
 import ImageUpload from './components/edit-tool/ImageUpload'
 
+import LandingPage from './components/landing-page/index'
+
 function App() {
   return (
     <div>
@@ -22,6 +24,12 @@ function App() {
         <Route exact path='/complete-account' component={CompleteAccount} />
         <Route exact path='/login-page' component={LoginPage} />
         <Route exact path='/edit-tool' component={ImageUpload} />
+        <Route exact path='/'>
+          <LandingPage signedIn={false} /> 
+        </Route>
+        <Route exact path='/home'>
+          <LandingPage signedIn={true} />
+        </Route>
       </ BrowserRouter>
       <Footer />
     </div>

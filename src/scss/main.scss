@@ -5,3 +5,31 @@
 @import './email-verification';
 @import './complete-account';
 @import './login-page';
+@import './landing-page';
+
+html, body {
+    font-family: "Avenir Next";
+    color: #3A3A3A;
+    line-height: 24px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.container {
+    padding-right: 3vw;
+    padding-left: 3vw;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 1300px) {
+    .container {
+        width: 1200px;
+    }
+}
+
+p {
+    margin: 5px 0;
+}
