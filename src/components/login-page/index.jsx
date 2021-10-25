@@ -110,24 +110,21 @@ export default function SignIn() {
           </Button>
 
           <br/>
-          <br/>
             <center>Or</center>
-           <br/>
-          <Button 
+        
+          <Button
                 type="submit"
                 fullWidth
                 variant="contained"
                 color="white"
                 className={classes.submit}
                 label="Continue with Google"
-                primary={true} 
-                // style={style} 
-                // onClick={(event) => this.handleClick(event)}/> 
-            >
-              <div class= "googleButton">
-                {/* <img src='public/Google.jpg' placeholder='google signin' /> */}
-                Google
+                primary={true}    
+              >    
+              <div>
+                <img src='Google.jpg' placeholder='google signin' />
               </div>
+              
             </Button> 
             
           <Grid container>
