@@ -1,9 +1,9 @@
 import React, {useState} from 'react'
 import ShowImage from './ShowImage'
-//import default image here
+import defaultCoverPhoto from './images/defaultCoverPhoto.jpeg'
 
 const ImageUpload = () => {
-    const [image, setImage] = useState(null) //insert default image here
+    const [image, setImage] = useState(defaultCoverPhoto)
     const maxImageFileSize = 1000000
 
     const imageSelectedHandler = event => {
@@ -12,6 +12,7 @@ const ImageUpload = () => {
             console.log("too big")
         }else{
             console.log("image sent to state")
+            console.dir(uploadedImage)
             setImage(uploadedImage)
         }
     }
@@ -24,7 +25,12 @@ const ImageUpload = () => {
     return (
     <div className="ImageUpload">
         <ShowImage image={image}/>
-        <input type="file" onChange={imageSelectedHandler}/>
+        <input 
+         style={{display: 'none'}} 
+         type="file" 
+         onChange={imageSelectedHandler}
+         ref={fileInput => this.fileInput = fileInput}/>
+        <button onClick={() => this.fileInput.click()}>Pick File</button>
         <button onClick={imageUploadHandler}>Upload</button>
     </div>
     )
