@@ -16,6 +16,10 @@ const ImageUpload = () => {
             setImage(uploadedImage)
         }
     }
+    const removeImage = () => {
+        setImage(defaultCoverPhoto)
+        console.log("remove image from backend")
+    }
     const imageUploadHandler = event => {
         console.dir(image)
         //send image to back end
@@ -46,7 +50,7 @@ const ImageUpload = () => {
          ref={inputRef}
          />
         <button style={buttonStyle} onClick={() => fileInput()}>Add Cover Image</button>
-        <button style={buttonStyle} onClick={() => fileInput()}>Remove Image</button>
+        <button style={buttonStyle} onClick={() => removeImage()}>Remove Image</button>
         <button style={buttonStyle} onClick={imageUploadHandler}>Replace Image</button>
     </div>
     )
