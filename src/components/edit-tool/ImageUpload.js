@@ -12,8 +12,9 @@ const ImageUpload = () => {
             console.log("too big")
         }else{
             console.log("image sent to state")
-            console.dir(URL.creatObjectURL(uploadedImage))
-            //setImage(URL.creatObjectURL(uploadedImage)) // URL.revokeObjectURL() needs to be called when URL is no longer needed to prevent memory leak
+            let imageURL = URL.createObjectURL(uploadedImage)
+            //console.dir(URL.creatObjectURL(uploadedImage))
+            setImage(imageURL) // URL.revokeObjectURL() needs to be called when URL is no longer needed to prevent memory leak
         }
     }
     const removeImage = () => {
@@ -33,7 +34,8 @@ const ImageUpload = () => {
         // Y: 216 px;
         'width': '182px',
         'height': '286px',
-        'border': 'none'
+        'border': 'none',
+        'flex-direction': 'column'
     }
     const buttonStyle = {
         'border': 'none',
