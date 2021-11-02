@@ -12,8 +12,8 @@ const ImageUpload = () => {
             console.log("too big")
         }else{
             console.log("image sent to state")
-            console.dir(uploadedImage)
-            setImage(uploadedImage)
+            console.dir(URL.creatObjectURL(uploadedImage))
+            //setImage(URL.creatObjectURL(uploadedImage)) // URL.revokeObjectURL() needs to be called when URL is no longer needed to prevent memory leak
         }
     }
     const removeImage = () => {
