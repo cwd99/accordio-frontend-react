@@ -1,9 +1,9 @@
 import welcomeToAccordio from '../../../images/welcome-to-accordio.png'
-import ctaLightBulb from '../../../images/cta-light-bulb.png'
-import ctaCaseStudyTemplate from '../../../images/cta-case-study-template.png'
-import ctaMail from '../../../images/cta-mail.png'
-import ctaCollaboration from '../../../images/cta-collaboration.png'
-import ctaCaseStudy from '../../../images/cta-case-study.png'
+import ctaLightBulb from './images/cta-light-bulb.png'
+import ctaCaseStudyTemplate from './images/cta-case-study-template.png'
+import ctaMail from './images/cta-mail.png'
+import ctaCollaboration from './images/cta-collaboration.png'
+import ctaCaseStudy from './images/cta-case-study.png'
 import { Button } from '@material-ui/core'
 
 const Cta = () => {
@@ -20,7 +20,7 @@ const Cta = () => {
                     </div>
                 </div>
                 <div className="column">
-                    <img src={welcomeToAccordio} alt="Welcome to Accordio" width="70%" className="cta-image"></img>
+                    <img src={welcomeToAccordio} alt="Welcome to Accordio" width="80%" className="cta-image"></img>
                 </div>
             </div>
 
@@ -34,7 +34,7 @@ const Cta = () => {
                 </div>
                 <div className="column">
                     <div className="image">
-                        <img src={ctaCaseStudyTemplate} alt="Case study template" width="70%" className="cta-image"></img>
+                        <img src={ctaCaseStudyTemplate} alt="Case study template" width="80%" className="cta-image"></img>
                     </div>
                 </div>
             </div>
@@ -49,7 +49,7 @@ const Cta = () => {
                 </div>
                 <div className="column">
                     <div className="image">
-                        <img src={ctaCollaboration} alt="Shared Collaboration" width="70%" className="cta-image"></img>
+                        <img src={ctaCollaboration} alt="Shared Collaboration" width="80%" className="cta-image"></img>
                     </div>
                 </div>
             </div>
@@ -63,7 +63,7 @@ const Cta = () => {
                 </div>
                 <div className="column">
                     <div className="image">
-                        <img src={ctaCaseStudy} alt="Case study" width="70%" className="cta-image"></img>
+                        <img src={ctaCaseStudy} alt="Case study" width="80%" className="cta-image"></img>
                     </div>
                 </div>
             </div>

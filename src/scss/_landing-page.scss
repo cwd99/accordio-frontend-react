@@ -25,16 +25,16 @@
         }
 
         .content {
-            padding-right: 25%;
+            padding-right: 23%;
             h1 {
                 font-weight: bold;
-                font-size: 36px;
+                font-size: 37px;
                 line-height: 38px;
             }
             p {
                 font-weight: 500;
-                font-size: 18px;
-                line-height: 22px;
+                font-size: 20px;
+                line-height: 26px;
             }
         }
 
@@ -45,7 +45,7 @@
         &:nth-child(3) {
             flex-direction: row-reverse;
             .content {
-                padding-left: 38%;
+                padding-left: 36%;
                 padding-right: 0;
                 text-align: right;
             }
