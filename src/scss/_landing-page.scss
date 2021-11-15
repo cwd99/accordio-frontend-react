@@ -55,6 +55,26 @@
         }
     }
 
+    @media only screen and (max-width: 1000px) {
+        .cta-row {
+            flex-direction: column !important;
+            grid-gap: 30px;
+            .column {
+                width: 100%;
+                padding: 0;
+                .content {
+                    padding: 0;
+                    text-align: left;
+                }
+                .cta-image {
+                    display: block;
+                    margin: auto;
+                    float: none;
+                }
+            }
+        }
+    }
+
     .get-started-btn, .load-more-btn {
         background-color: #1A21B6;
         padding: 12px 38px;
@@ -169,6 +189,7 @@
 
             .author {
                 margin-right: 10px;
+                font-weight: bold;
             }
 
             .role {
@@ -186,14 +207,12 @@
         text-align: center;
         padding-bottom: 40px;
         margin: auto;
+        width: 100%;
+        max-width: 500px;
     }
 
     .filter {
         margin: 0;
-    }
-
-    p {
-        width: 500px;
     }
 }
 
@@ -201,7 +220,7 @@
     margin: auto;
     margin-top: -35px;
     text-align: center;
-    width: 35%;
+    width: 600px;
     background-color: white;
     box-shadow: 2px 2px 15px rgba(79, 79, 79, 0.15);
     border-radius: 8px;
@@ -213,6 +232,12 @@
     .MuiInputBase-root {
         padding-left: 20px;
         width: 100%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .search-bar {
+        width: 80%;
     }
 }
 

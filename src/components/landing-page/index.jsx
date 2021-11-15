@@ -62,7 +62,7 @@ function LandingPage(props) {
                         placeholder="Search for everything case studies here"
                         inputProps={{ 'aria-label': 'search for everything case studies here' }}
                     />
-                    <IconButton type="submit" sx={{ p: '10px' }} aria-label="search">
+                    <IconButton type="submit" aria-label="search">
                         <i className="fas fa-search"></i>
                     </IconButton>
                 </div>

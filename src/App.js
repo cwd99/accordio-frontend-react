@@ -1,4 +1,6 @@
 import './scss/main.scss'
+import { createTheme } from '@material-ui/core/styles';
+import { ThemeProvider } from '@material-ui/styles';
 
 import {BrowserRouter, Route} from 'react-router-dom'
 
@@ -14,11 +16,21 @@ import ImageUpload from './components/edit-tool/ImageUpload'
 
 import LandingPage from './components/landing-page/index'
 
+const theme = createTheme({
+  typography: {
+    fontFamily: [
+      'Lato',
+      'Arial',
+    ].join(',')
+  }
+});
+
 function App() {
   return (
-    <div>
-      <Navigation />
+    <ThemeProvider theme={theme}>
       <BrowserRouter>
+        <Navigation />
+
         <Route exact path='/create-account' component={CreateAccount} />
         <Route exact path='/email-verification' component={EmailVerification} />
         <Route exact path='/complete-account' component={CompleteAccount} />
@@ -30,9 +42,10 @@ function App() {
         <Route exact path='/home'>
           <LandingPage signedIn={true} />
         </Route>
+
+        <Footer />
       </ BrowserRouter>
-      <Footer />
-    </div>
+    </ThemeProvider>
   );
 }
 
