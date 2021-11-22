@@ -111,20 +111,20 @@ export default function SignIn() {
 
           <br/>
             <center>Or</center>
-           <br/>
-          <Button 
+        
+          <Button
                 type="submit"
                 fullWidth
                 variant="contained"
                 color="white"
                 className={classes.submit}
                 label="Continue with Google"
-                img src= "src/images/btn_google_signin_dark_focus_web@2x.png"
-                // primary={true} 
-                // style={style} 
-                // onClick={(event) => this.handleClick(event)}/>
-            >
-                {/* img src= "src/images/btn_google_signin_dark_focus_web@2x.png" */}
+                primary={true}    
+              >    
+              <div>
+                <img src='Google.jpg' placeholder='google signin' />
+              </div>
+              
             </Button> 
             
           <Grid container>

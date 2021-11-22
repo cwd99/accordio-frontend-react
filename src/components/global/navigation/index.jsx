@@ -45,7 +45,7 @@ class Navigation extends React.Component {
             return (
                 <ul className='nav-main'>
                     <li><a className='logo' href='/'>Accordio</a></li>
-                    <li><a className='push' href='/search'>Already a member?</a></li>
+                    {/* <li><a className='push' href='/search'>Already a member?</a></li> */}
                     {/* <li><a href='/login'>Login</a></li> */}
                     {/* <li><a href='/create-account'><button className='get-started-btn'>Get Started</button></a></li> */}
                 </ul>
