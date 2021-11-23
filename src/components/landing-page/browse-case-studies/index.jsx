@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import caseStudyBrowse from '../../../images/case-study-browse.png'
-import { Grid, Button } from '@material-ui/core'
+import Grid from '@material-ui/core/Grid'
 
 const BrowseCaseStudies = (props) => {
 
@@ -42,9 +42,9 @@ const BrowseCaseStudies = (props) => {
             </Grid>
 
             <div className="text-center">
-                <Button variant="contained" disableElevation className="load-more-btn">
+                <button className="blue-btn btn-filled">
                     Load More
-                </Button>
+                </button>
             </div>
         </>
     )

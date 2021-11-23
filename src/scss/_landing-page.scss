@@ -203,7 +203,11 @@
     background: #F3F5F5;
     padding: 90px 70px;
 
-    & > *:not(:last-child) {
+    h1 {
+        max-width: fit-content;
+    }
+
+    & > * {
         text-align: center;
         padding-bottom: 40px;
         margin: auto;
@@ -212,7 +216,8 @@
     }
 
     .filter {
-        margin: 0;
+        margin: auto;
+        padding-bottom: 0;
     }
 }
 

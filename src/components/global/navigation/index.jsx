@@ -3,7 +3,6 @@ import Avatar from '@material-ui/core/Avatar'
 import avatar from '../../../images/avatar.png'
 import Menu from '@material-ui/core/Menu'
 import { InputBase, IconButton } from '@material-ui/core'
-import Button from '@material-ui/core/Button'
 import { makeStyles } from '@material-ui/core/styles'
 import Badge from '@material-ui/core/Badge'
 import AccountMenu from './account-menu'
@@ -147,7 +146,7 @@ const Navigation = () => {
                 </li>
                 <li><a href='/login-page'>Sign In</a></li>
                 <li>
-                    <Button variant="contained" disableElevation className="get-started-btn get-started-btn-filled" href="/create-account">Get Started</Button>
+                    <button className="blue-btn btn-filled btn-small" href="/create-account">Get Started</button>
                 </li>
             </>
         }
@@ -167,7 +166,7 @@ const Navigation = () => {
                 <span className="label">{mobileMenuOpen ? 'Notifications' : ''}</span>
             </li>
             <li>
-                <Button variant="contained" disableElevation className="get-started-btn get-started-btn-filled" href="/create-account">Create</Button>
+                <button className="blue-btn btn-outlined btn-small" href="/create-account">Create</button>
             </li>
             <li onClick={(e) => handleClick(e, 'account')} ref={accountRef}>
                 <IconButton disableRipple style={{ backgroundColor: 'transparent', padding: 0 }}>

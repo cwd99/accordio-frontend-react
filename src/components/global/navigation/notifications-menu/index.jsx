@@ -98,11 +98,11 @@ const NotificationsMenu = React.forwardRef((props, ref) => {
                             <div className={classes.linkText} nowrap="true">{menu.text}</div>
                             {menu.type === "mention" ? (<>
                                 <div className={classes.showCaseStudyText}>Would you like to show this case study on your profile?</div>
-                                <div className={classes.showHideBtns}>
-                                    <button className="get-started-btn get-started-btn-filled" style={{'marginRight': '10px'}}>
+                                <div>
+                                    <button className="blue-btn btn-filled btn-small" style={{'marginRight': '10px'}}>
                                         Show
                                     </button>
-                                    <button className="get-started-btn get-started-btn-outlined">
+                                    <button className="blue-btn btn-outlined btn-small">
                                         Hide
                                     </button>
                                 </div>
@@ -133,7 +133,7 @@ const NotificationsMenu = React.forwardRef((props, ref) => {
                 }}
             >
                 {notificationsActionsMenu.map((menu) => (
-                    <MenuItem className={[props.menuItem, 'notificationsActionsMenu']} key={menu.primaryText}>
+                    <MenuItem className={`${props.menuItem} notificationsActionsMenu`} key={menu.primaryText}>
                         <ListItemIcon>
                             <i className={`far ${menu.icon}`}></i>
                         </ListItemIcon>

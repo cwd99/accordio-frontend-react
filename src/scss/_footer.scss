@@ -8,7 +8,7 @@
         .footer-midline {
             background: $footer-font-color-white;
         }
-        &:hover {
+        a:hover {
             text-decoration: underline;
             opacity: 0.75;
         }

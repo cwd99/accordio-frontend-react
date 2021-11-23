@@ -22,6 +22,7 @@ html, body {
     padding-left: 3vw;
     margin-right: auto;
     margin-left: auto;
+    position: relative;
 }
 
 @media (min-width: 1300px) {
@@ -32,4 +33,41 @@ html, body {
 
 p {
     margin: 5px 0;
+}
+
+.blue-btn {
+    padding: 0 38px;
+    border: none;
+    margin-top: 20px;
+    border-radius: 8px;
+    width: auto;
+    height: 58px;
+    font-size: 16px;
+    text-transform: capitalize;
+    border: 1px solid #1A21B6;
+
+    &.btn-filled {
+        background-color: #1A21B6;
+        color: white;
+        &:hover {
+            background: linear-gradient(0deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)), #1A21B6;
+            cursor: pointer;
+            color: white;
+        }
+    }
+    &.btn-outlined {
+        background-color: white;
+        color: #1A21B6;
+        &:hover {
+            background: #F7F7F7;
+            cursor: pointer;
+        }
+    }
+    &.btn-small {
+        padding: 0 30px;
+        height: 40px;
+    }
+    &.btn-med {
+        height: 48px;
+    }
 }

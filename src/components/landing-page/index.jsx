@@ -2,7 +2,7 @@ import React from 'react'
 import zap from '../../images/zap.png'
 import smileFace from '../../images/smile.png'
 import lightbulb from '../../images/lightbulb.png'
-import { InputBase, IconButton, Button } from '@material-ui/core'
+import { InputBase, IconButton } from '@material-ui/core'
 import Cta from './cta/index'
 import Filter from './Filter/index'
 import FeaturedCaseStudies from './featured-case-studies'
@@ -23,9 +23,7 @@ function LandingPage(props) {
                             <div className="content">
                                 <h1>Welcome, Gabriela</h1>
                                 <p>Explore case studies below or start creating your own with our research-based template</p>
-                                <Button variant="contained" disableElevation className="get-started-btn">
-                                    Create Your First Case Study
-                                </Button>
+                                <button className="blue-btn btn-filled">Create Your First Case Study</button>
                             </div>
                         </div>
                         <div className="column">
@@ -76,9 +74,7 @@ function LandingPage(props) {
                     <img src={lightbulb} alt="lightbulb" />
                     <div className="footer-cta-content">
                         <p>Our mission is to provide the right space, tools and guidance to our UX community</p>
-                        <Button variant="contained" disableElevation className="get-started-btn" href="/create-account">
-                            Get Started
-                        </Button>
+                        <button className="blue-btn btn-filled">Get Started</button>
                     </div>
                 </div>
 
