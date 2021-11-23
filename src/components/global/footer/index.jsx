@@ -11,11 +11,11 @@ const Footer = () => {
 
                 <div className='container'>
                     <ul className='footer-top'>
-                        <li><Link className='footer-top__logo' to='/'>Accordio</Link></li>
-                        <li><a href="/">Home</a></li>
-                        <li><a href='/about'>About</a></li>
-                        <li><a href='/create-account'>Join Accordio</a></li>
-                        <li><a href='/login-page'>Sign In</a></li>
+                        <li className='footer-top__logo'>Accordio</li>
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to='/about'>About</Link></li>
+                        <li><Link to='/create-account'>Join Accordio</Link></li>
+                        <li><Link to='/login-page'>Sign In</Link></li>
                     </ul>
 
                     <hr className='footer-midline' />
@@ -23,8 +23,8 @@ const Footer = () => {
                     <div className='footer-bottom'>
                         <span>&copy; 2021 Accordio. All Rights Reserved</span>
                         <ul>
-                            <li><a href='/terms-and-conditions'>Terms</a></li>
-                            <li><a href='/privacy'>Privacy</a></li>
+                            <li><Link to='/terms-and-conditions'>Terms</Link></li>
+                            <li><Link to='/privacy'>Privacy</Link></li>
                         </ul>
                     </div>
                 </div>

@@ -7,6 +7,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import Badge from '@material-ui/core/Badge'
 import AccountMenu from './account-menu'
 import NotificationsMenu from './notifications-menu'
+import { Link, useLocation } from 'react-router-dom'
 
 const Navigation = () => {
 
@@ -15,7 +16,6 @@ const Navigation = () => {
     const [loginPages, setLoginPages] = useState(false)
 
     const [showSearch, setShowSearch] = useState(false)
-    // const [isMobile, setIsMobile] = useState(window.innerWidth >= 600 ? true : false)
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
     const [accountAnchorEl, setAccountAnchorEl] = useState(null)
     const accountRef = useRef();
@@ -23,6 +23,8 @@ const Navigation = () => {
     const [notificationsAnchorEl, setNotificationsAnchorEl] = useState(null)
     const notificationsRef = useRef();
     const notificationsOpen = Boolean(notificationsAnchorEl);
+
+    const { pathname } = useLocation();
 
     const useStyles = makeStyles((theme) => ({
         avatar: {
@@ -44,21 +46,21 @@ const Navigation = () => {
     const classes = useStyles();
 
     const checkCurrentUrlPath = () => {
-        let currentPath = window.location.href
-        currentPath = currentPath.split("/")
-        const arrayLength = currentPath.length - 1
-        currentPath = currentPath[arrayLength]
-
-        if ((currentPath === "create-account") || (currentPath === "email-verification") || (currentPath === "complete-account")) {
+        const registerPaths = ['/create-account', '/email-verification', '/complete-account']
+        if (registerPaths.includes(pathname)) {
             setRegistered(false)
             setRegistrationPages(true)
             setLoginPages(false)
-        } else if (currentPath === "login-page") {
+        } else if (pathname === "/login-page") {
             setRegistered(false)
             setRegistrationPages(false)
             setLoginPages(true)
-        } else if (currentPath === "home") {
+        } else if (pathname === "/home") {
             setRegistered(true)
+            setRegistrationPages(false)
+            setLoginPages(false)
+        } else {
+            setRegistered(false)
             setRegistrationPages(false)
             setLoginPages(false)
         }
@@ -82,15 +84,13 @@ const Navigation = () => {
         return _ => {
             window.removeEventListener('resize', handleResize)
         }
-    }, [mobileMenuOpen])
+    }, [mobileMenuOpen, pathname])
 
     const handleClick = (event, type) => {
         if (type === 'account') {
-            // setAccountAnchorEl(event.currentTarget)
             setAccountAnchorEl(accountRef.current)
         }
         else {
-            // setNotificationsAnchorEl(event.currentTarget)
             setNotificationsAnchorEl(notificationsRef.current)
         }
     };
@@ -126,12 +126,10 @@ const Navigation = () => {
         )
     }
 
-    console.log(mobileMenuOpen)
-
     let navbarLinks = '';
     if (!registered) {
         if (registrationPages) {
-            navbarLinks = <li><a href='/login-page'>Already a member?</a></li>
+            navbarLinks = <li><Link to='/login-page'>Already a member?</Link></li>
         }
         else if (loginPages) {
             navbarLinks = ''
@@ -144,9 +142,9 @@ const Navigation = () => {
                         : <i className="fas fa-search" onClick={() => setShowSearch(true)}></i>
                     }
                 </li>
-                <li><a href='/login-page'>Sign In</a></li>
+                <li><Link to='/login-page'>Sign In</Link></li>
                 <li>
-                    <button className="blue-btn btn-filled btn-small" href="/create-account">Get Started</button>
+                    <Link to="/create-account"><button className="blue-btn btn-filled btn-small">Get Started</button></Link>
                 </li>
             </>
         }
@@ -166,7 +164,7 @@ const Navigation = () => {
                 <span className="label">{mobileMenuOpen ? 'Notifications' : ''}</span>
             </li>
             <li>
-                <button className="blue-btn btn-outlined btn-small" href="/create-account">Create</button>
+                <Link to="create-case-study"><button className="blue-btn btn-outlined btn-small">Create</button></Link>
             </li>
             <li onClick={(e) => handleClick(e, 'account')} ref={accountRef}>
                 <IconButton disableRipple style={{ backgroundColor: 'transparent', padding: 0 }}>
@@ -182,7 +180,7 @@ const Navigation = () => {
             <header className={`nav ${mobileMenuOpen ? 'mobile' : ''} ${!registered ? 'nav-blue' : ''}`}>
                 <div className='container'>
                     <div className="nav-main">
-                        <a className='logo' href='/'>Accordio</a>
+                        <Link className='logo' to='/'>Accordio</Link>
                         <div className="mobile-menu-icon" onClick={handleMobileMenu}>
                             {mobileMenuOpen ? <span>&#10005;</span> : <i className="fas fa-bars"></i>}
                         </div>

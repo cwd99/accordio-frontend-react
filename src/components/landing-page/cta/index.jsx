@@ -4,6 +4,7 @@ import ctaCaseStudyTemplate from './images/cta-case-study-template.png'
 import ctaMail from './images/cta-mail.png'
 import ctaCollaboration from './images/cta-collaboration.png'
 import ctaCaseStudy from './images/cta-case-study.png'
+import { Link } from 'react-router-dom'
 
 const Cta = () => {
     return (
@@ -13,9 +14,9 @@ const Cta = () => {
                     <div className="content">
                         <h1>Writing a case study?</h1>
                         <p>Confidently write discoverable case studies with guidance along the way</p>
-                        <button className="blue-btn btn-filled" href="/create-account">
+                        <Link to="/create-account"><button className="blue-btn btn-filled" href="/create-account">
                             Get Started
-                        </button>
+                        </button></Link>
                     </div>
                 </div>
                 <div className="column">

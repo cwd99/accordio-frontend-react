@@ -1,8 +1,9 @@
+import React, { useEffect } from "react"
 import './scss/main.scss'
 import { createTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
 
-import {BrowserRouter, Route} from 'react-router-dom'
+import {Route, useLocation} from 'react-router-dom'
 
 import Navigation from './components/global/navigation/index'
 import Footer from './components/global/footer/index'
@@ -26,9 +27,16 @@ const theme = createTheme({
 });
 
 function App() {
+
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
     <ThemeProvider theme={theme}>
-      <BrowserRouter>
+
         <Navigation />
 
         <Route exact path='/create-account' component={CreateAccount} />
@@ -44,7 +52,7 @@ function App() {
         </Route>
 
         <Footer />
-      </ BrowserRouter>
+
     </ThemeProvider>
   );
 }
