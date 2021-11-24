@@ -1,50 +1,98 @@
 .footer {
-    background-color: $footer-background-color;
-    color: $footer-font-color;
+
+    &-blue {
+        background-color: $footer-background-blue;
+        * {
+            color: $footer-font-color-white;
+        }
+        .footer-midline {
+            background: $footer-font-color-white;
+        }
+        a:hover {
+            text-decoration: underline;
+            opacity: 0.75;
+        }
+    }
+    &-gray {
+        background-color: $footer-background-gray; 
+        * {
+            color: $footer-font-color-blue;
+        }
+        .footer-midline {
+            background: $footer-font-color-blue;
+        }
+        a:hover {
+            text-decoration: underline;
+            opacity: 0.75;
+        }
+    }
 
     &-top {
         display: flex;
+        padding: 72px 0 48px;
+        margin: 0;
+        grid-gap: 2.5rem;
 
         &__logo {
-            font-weight: 500;
-            font-size: 2rem;
-            position: absolute;
-            width: 120px;
-            height: 20.3px;
-            left: 100.4px;
-            top: 38px;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 36px;
+            line-height: 43px;
+            margin-right: 30px;
         }
 
         & > li {
             list-style-type: none;
-            padding: 15vh 0 6vh 5vw;
+            display: flex;
+            align-items: center;
 
             & > a {
                 text-decoration: none;
-                color: $footer-font-color;
             }
         }
     }
 
     &-midline {
-        width: 86%;
+        margin: 0;
+        height: 1px;
+        border: none;
     }
 
     &-bottom {
         display: flex;
+        padding: 48px 0 72px;
+        margin: 0;
+        justify-content: space-between;
 
-        &__push {
-            margin-left: 57vw;
+        ul {
+            list-style: none;
+            display: flex;
+            gap: 2.5rem;
+            margin: 0;
+            padding: 0;
         }
 
-        & > li {
+        li {
             list-style-type: none;
-            padding: 8vh 0 15vh 5vw;
-
-            & > a {
+            a {
                 text-decoration: none;
-                color: $footer-font-color;
             }
+        }
+    }
+
+    @media (max-width: 600px) {
+        &-top, &-bottom, &-bottom ul {
+            flex-direction: column;
+            grid-gap: 30px;
+        }
+        &-top {
+            padding: 30px 0 48px;
+        }
+        &-bottom {
+            padding-bottom: 48px;
+        }
+        &-top__logo {
+            margin-bottom: 15px;
         }
     }
 }

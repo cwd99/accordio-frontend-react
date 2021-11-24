@@ -1,6 +1,9 @@
+import React, { useEffect } from "react"
 import './scss/main.scss'
+import { createTheme } from '@material-ui/core/styles';
+import { ThemeProvider } from '@material-ui/styles';
 
-import {BrowserRouter, Route} from 'react-router-dom'
+import {Route, useLocation} from 'react-router-dom'
 
 import Navigation from './components/global/navigation/index'
 import Footer from './components/global/footer/index'
@@ -12,19 +15,45 @@ import LoginPage from './components/login-page/index'
 
 import ImageUpload from './components/edit-tool/ImageUpload'
 
+import LandingPage from './components/landing-page/index'
+
+const theme = createTheme({
+  typography: {
+    fontFamily: [
+      'Lato',
+      'Arial',
+    ].join(',')
+  }
+});
+
 function App() {
+
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
-    <div>
-      <Navigation />
-      <BrowserRouter>
+    <ThemeProvider theme={theme}>
+
+        <Navigation />
+
         <Route exact path='/create-account' component={CreateAccount} />
         <Route exact path='/email-verification' component={EmailVerification} />
         <Route exact path='/complete-account' component={CompleteAccount} />
         <Route exact path='/login-page' component={LoginPage} />
         <Route exact path='/edit-tool' component={ImageUpload} />
-      </ BrowserRouter>
-      <Footer />
-    </div>
+        <Route exact path='/'>
+          <LandingPage signedIn={false} /> 
+        </Route>
+        <Route exact path='/home'>
+          <LandingPage signedIn={true} />
+        </Route>
+
+        <Footer />
+
+    </ThemeProvider>
   );
 }
 
