@@ -58,7 +58,13 @@ const useStyles = makeStyles((theme) => ({
   },
   submit: {
     margin: theme.spacing(3, 0, 2),
+    width: '100%',
+    height: '40px'
   },
+  google: {
+    width: '100%',
+    height: '50px'
+  }
 }));
 
 export default function SignIn() {
@@ -111,22 +117,20 @@ export default function SignIn() {
 
           <br/>
             <center>Or</center>
-        
+            <br/>
           <Button
                 type="submit"
-                fullWidth
-                variant="contained"
-                color="white"
-                className={classes.submit}
+                className={classes.google}
                 label="Continue with Google"
-                primary={true}    
+                primary={true}  
               >    
               <div>
                 <img src='Google.jpg' placeholder='google signin' />
               </div>
               
             </Button> 
-            
+            <br/>
+            <br/>
           <Grid container>
             <Grid item xs>
               <Link href="#" variant="body2">
