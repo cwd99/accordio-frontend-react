@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react'
+import React, { useEffect, useState, useRef, useCallback } from 'react'
 import Avatar from '@material-ui/core/Avatar'
 import avatar from '../../../images/avatar.png'
 import Menu from '@material-ui/core/Menu'
@@ -45,7 +45,7 @@ const Navigation = () => {
 
     const classes = useStyles();
 
-    const checkCurrentUrlPath = () => {
+    const checkCurrentUrlPath = useCallback(() => {
         const registerPaths = ['/create-account', '/email-verification', '/complete-account']
         if (registerPaths.includes(pathname)) {
             setRegistered(false)
@@ -64,7 +64,7 @@ const Navigation = () => {
             setRegistrationPages(false)
             setLoginPages(false)
         }
-    }
+    }, [pathname])
 
     const search = (e) => {
         e.preventDefault()
@@ -84,7 +84,7 @@ const Navigation = () => {
         return _ => {
             window.removeEventListener('resize', handleResize)
         }
-    }, [mobileMenuOpen, pathname])
+    }, [mobileMenuOpen, pathname, checkCurrentUrlPath])
 
     const handleClick = (event, type) => {
         if (type === 'account') {
@@ -144,7 +144,7 @@ const Navigation = () => {
                 </li>
                 <li><Link to='/login-page'>Sign In</Link></li>
                 <li>
-                    <Link to="/create-account"><button className="blue-btn btn-filled btn-small">Get Started</button></Link>
+                    <Link to="/create-account"><button className={`blue-btn btn-filled ${mobileMenuOpen ? 'btn-large' : 'btn-small'}`}>Get Started</button></Link>
                 </li>
             </>
         }
@@ -164,7 +164,7 @@ const Navigation = () => {
                 <span className="label">{mobileMenuOpen ? 'Notifications' : ''}</span>
             </li>
             <li>
-                <Link to="create-case-study"><button className="blue-btn btn-outlined btn-small">Create</button></Link>
+                <Link to="create-case-study"><button className={`blue-btn btn-outlined ${mobileMenuOpen ? 'btn-large' : 'btn-small'}`}>Create</button></Link>
             </li>
             <li onClick={(e) => handleClick(e, 'account')} ref={accountRef}>
                 <IconButton disableRipple style={{ backgroundColor: 'transparent', padding: 0 }}>
@@ -177,7 +177,7 @@ const Navigation = () => {
 
     return (
         <>
-            <header className={`nav ${mobileMenuOpen ? 'mobile' : ''} ${!registered ? 'nav-blue' : ''}`}>
+            <header className={`nav ${mobileMenuOpen ? 'mobile nav-blue' : ''}`}>
                 <div className='container'>
                     <div className="nav-main">
                         <Link className='logo' to='/'>Accordio</Link>

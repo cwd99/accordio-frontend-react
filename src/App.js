@@ -17,12 +17,11 @@ import ImageUpload from './components/edit-tool/ImageUpload'
 
 import LandingPage from './components/landing-page/index'
 
+import CreateCaseStudy from './components/create-case-study/create-case-study'
+
 const theme = createTheme({
   typography: {
-    fontFamily: [
-      'Lato',
-      'Arial',
-    ].join(',')
+    fontFamily: ['Lato', 'Arial'].join(',')
   }
 });
 
@@ -44,6 +43,7 @@ function App() {
         <Route exact path='/complete-account' component={CompleteAccount} />
         <Route exact path='/login-page' component={LoginPage} />
         <Route exact path='/edit-tool' component={ImageUpload} />
+        <Route exact path='/create-case-study' component={CreateCaseStudy} />
         <Route exact path='/'>
           <LandingPage signedIn={false} /> 
         </Route>
