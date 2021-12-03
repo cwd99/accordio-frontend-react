@@ -6,11 +6,16 @@
 @import './complete-account';
 @import './login-page';
 @import './landing-page';
+@import './create-case-study';
 
 html, body {
     font-family: "Lato", "Arial";
     color: #3A3A3A;
     line-height: 24px;
+}
+
+button {
+    font-family: "Lato", "Arial";
 }
 
 .text-center {
@@ -45,6 +50,7 @@ p {
     font-size: 16px;
     text-transform: capitalize;
     border: 1px solid #1A21B6;
+    font-weight: 600;
 
     &.btn-filled {
         background-color: #1A21B6;

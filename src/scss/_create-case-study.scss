@@ -1,0 +1,187 @@
+.create-case-study {
+    display: flex;
+    margin: 50px !important;
+
+    .MuiTabs-indicator {
+        display: none;
+    }
+    .MuiTabs-root {
+        overflow: visible;
+    }
+    .MuiTab-root {
+        border: 1px solid #131988;
+        border-radius: 8px;
+        margin-bottom: 18px;
+        padding: 7px 0;
+        text-transform: capitalize;
+        font-size: 16px;
+        color: #131988;
+        font-weight: 600;
+        margin-right: 20px;
+        opacity: 1;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    .Mui-selected {
+        background: #C6C7ED;
+    }
+
+    .MuiInputLabel-root, .MuiTextField-root {
+        padding-bottom: 10px;
+        color: #3A3A3A;
+        font-weight: 600;
+
+        .MuiOutlinedInput-input {
+            padding: 16px;
+            .Mui-focused {
+                border-color: #1A21B6;
+            }
+        }
+        .MuiOutlinedInput-notchedOutline {
+            border-color: #3A3A3A;
+        }
+        .MuiOutlinedInput-multiline {
+            padding: 0;
+        }
+    }
+    .MuiAutocomplete-tag.MuiChip-root {
+        background-color: #3A3A3A;
+        color: white;
+        .MuiChip-deleteIcon {
+            display: none;
+        }
+    }
+
+    .word-count {
+        margin-top: 0;
+        text-align: right;
+    }
+    .MuiFormHelperText-contained {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .left-side {
+        position: sticky;
+        align-self: flex-start;
+        top: 100px;
+        a {
+            text-decoration: none;
+        }
+    }
+    .learn-more {
+        margin-bottom: 45px;
+        color: #3A3A3A;
+        span {
+            margin-left: 5px;
+            color: #1A21B6;
+        }
+        &:hover {
+            cursor: pointer;
+            span {
+                margin-left: 15px;
+                opacity: 0.75;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .tabPanel {
+        width: 90%;
+        margin-left: 50px;
+        
+        .hidden { 
+            display: none; 
+        }
+    }
+
+    .tab-heading {
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        line-height: 18px;
+        letter-spacing: 1.75px;
+        font-size: 14px;
+    }
+
+    .context {
+        display: flex;
+        grid-gap: 20px;
+
+        .fields {
+            width: 100%;
+
+            .MuiGrid-root {
+                margin-bottom: 15px;
+            }
+        }
+
+        .send-invite {
+            text-decoration: none;
+            color: #1A21B6;
+            &:hover {
+                cursor: pointer;
+                opacity: 0.75;
+                text-decoration: underline;
+                font-size: 17px;
+                line-height: 23px;
+            }
+        }
+        
+        .client-timeline-accordion {
+            .MuiAccordionSummary-root {
+                display: inline-flex;
+                padding: 0;
+                color: #1A21B6;
+            }
+            .MuiAccordionDetails-root {
+                display: block;
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+    }
+}
+
+.guiding-light {
+    margin-top: 2px !important;
+    margin-bottom: 12px !important;
+    font-size: 13px;
+    letter-spacing: 0.25px;
+    color: #3A3A3A;
+    .MuiAccordionSummary-root, .MuiAccordionSummary-root.Mui-expanded {
+        margin: 0;
+        min-height: 48px;
+    }
+    .MuiAccordionSummary-content, .MuiAccordionSummary-content.Mui-expanded {
+        margin: 0;
+    }
+    &.MuiAccordion-root:before {
+        display: none;
+    }
+    .MuiAccordionSummary-root {
+        padding: 0;
+    }
+    .MuiAccordionDetails-root {
+        border-left: 1px solid #BBBBBB;
+        margin-left: 10px;
+        display: block;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+    .guiding-light-icon {
+        padding-right: 10px;
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.case-study-button-actions {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+
+    & > button {
+        width: calc(33% - 20px);
+    }
+}
