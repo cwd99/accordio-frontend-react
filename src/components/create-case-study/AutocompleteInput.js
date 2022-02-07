@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import TextField from '@material-ui/core/TextField'
-import Autocomplete from '@mui/material/Autocomplete'
+import Autocomplete from '@material-ui/lab/Autocomplete';
 import avatar from '../../images/avatar.png'
 import { makeStyles } from '@material-ui/core/styles'
-import { createFilterOptions } from '@mui/material/Autocomplete';
+import { createFilterOptions } from '@material-ui/lab/Autocomplete';
 
 const role = [
     'UX Designer', 'UX/UI Designer', 'UX Researcher'
