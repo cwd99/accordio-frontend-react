@@ -50,6 +50,7 @@ function App() {
         <Route exact path='/home'>
           <LandingPage signedIn={true} />
         </Route>
+        <Route exact path='/about-me' />
 
         <Footer />
 
