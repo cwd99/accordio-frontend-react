@@ -17,6 +17,8 @@ import ImageUpload from './components/edit-tool/ImageUpload'
 
 import LandingPage from './components/landing-page/index'
 
+import AboutMe from './components/about-me/index'
+
 import CreateCaseStudy from './components/create-case-study/create-case-study'
 
 const theme = createTheme({
@@ -50,7 +52,9 @@ function App() {
         <Route exact path='/home'>
           <LandingPage signedIn={true} />
         </Route>
-        <Route exact path='/about-me' />
+        <Route exact path='/about-me'>
+          < AboutMe signedIn={true}/>
+        </Route>
 
         <Footer />
 
