@@ -17,17 +17,30 @@ function AboutMe(props) {
 
                 <div className="welcome">
                     <div className="cta-row container">
-                        <div className="about-me-bio">
+                        <div className="name_and_avatar">
                             
-                            <div className='column' id="avatar">
+                            <div className='column' id="avatar_edit">
                                 <img src={avatar} alt="profile picture" />
+                                <div className='edit'>
+                                    <a href='Change photo'>Change photo</a>
+                                    <br/>
+                                    <a href='Remove photo'>Remove current</a>
+                                </div>
+                                <div className='name_and_pronoun'>
+                                    <div className='name_and_edit'>
+                                        <span>Gabriela Garcia</span>
+                                        <a href='edit_name'>Edit name</a>
+                                    </div>
+                                    <div className='name_and_pronouns'>
+                                        <span>She/Her/Hers</span>
+                                        <a href='edit_pronouns'>Edit pronouns</a>
+                                    </div>
+                                </div>
                             </div>
 
                             </div>
                             <div className="column" id="profile">
-                            Strategic UX designer, problem solver and team player. I am energized by fast-paced, collaborative 
-                            environments and motivated by human-centered design. I endeavour to provide holistic, meaningful 
-                            solutions for people while meeting business needs. Outside of work, I am a craft market explorer and always thinking of ways to live optimally.
+                            Strategic UX designer
                             </div>
                     </div>
 
@@ -74,9 +87,7 @@ function AboutMe(props) {
 
                     </div>
                 </div>
-
-
-                
+               
             </div>
             // <div className='nav_and_button'>Hello There</div>
         )
