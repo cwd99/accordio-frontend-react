@@ -11,10 +11,10 @@
     padding: 20px 70px;
 }
 
-.ctw-row-container {
+.cta_row_container {
     display: grid;
     grid-template-columns: 300px auto;
-    position: relative;
+    position: flex;
     padding: 0px;
 }
 
@@ -23,7 +23,7 @@ img {
     height: 184px;
     padding: 5px;
     margin: 5px;
-    float: right;
+    float: left;
     position: relative;
     left: 0%;
     right: 0%;
@@ -32,8 +32,6 @@ img {
 }
 
 .avatar_edit {
-    height: 184px;
-    width: 784px;
     left: 0px;
     top: 0px;
     border-radius: 0px;
@@ -62,7 +60,9 @@ img {
     letter-spacing: 0em;
     text-align: left;
 }
-
+.profile {
+    padding: 10px;
+}
 .column #avatar {
     width: 280px;
 }
