@@ -20,6 +20,7 @@ import LandingPage from './components/landing-page/index'
 import AboutMe from './components/about-me/index'
 
 import CreateCaseStudy from './components/create-case-study/create-case-study'
+import AboutMeEdit from "./components/about-me/AboutMeEdit";
 
 const theme = createTheme({
   typography: {
@@ -46,6 +47,7 @@ function App() {
         <Route exact path='/login-page' component={LoginPage} />
         <Route exact path='/edit-tool' component={ImageUpload} />
         <Route exact path='/create-case-study' component={CreateCaseStudy} />
+        <Route exact path='/about-me-edit' component={AboutMeEdit} />
         <Route exact path='/'>
           <LandingPage signedIn={false} /> 
         </Route>

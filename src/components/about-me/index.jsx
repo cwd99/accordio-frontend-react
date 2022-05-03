@@ -6,6 +6,7 @@ import { InputBase, IconButton } from '@material-ui/core'
 import accordio from '../../images/accordio.png'
 import avatar from '../../images/Ellipse 20.png'
 import { Link } from 'react-router-dom'
+import AboutMeEdit from './AboutMeEdit'
 
 function AboutMe(props) {
 
@@ -24,19 +25,22 @@ function AboutMe(props) {
                             <div className="profile" >
                                         <div className='avatar_edit'>
                                             <img src={avatar} alt="profile picture" />
-                                            <div className='edit'>
+                                            <br/>
+                                            <br/>
+                                            <br/>
                                                 <a href='Change photo'>Change photo</a>
                                                 <br/>
                                                 <a href='Remove photo'>Remove current</a>
-                                            </div>                                 
+                                                                            
                                         </div>
                                             <div className='name_and_edit'>
                                                 <span>Gabriela Garcia</span>
                                                 <a href='edit_name'>Edit name</a>
                                             </div>
+                                            <br />
                                             <div className='name_and_pronouns'>
-                                                <span>She/Her/Hers</span>
-                                                <a href='edit_pronouns'>Edit</a>
+                                                <span>She/Her/Hers</span>                                                
+                                                <a href='edit_pronouns'>Edit pronouns</a>
                                             </div>
                             </div>
                         </div>

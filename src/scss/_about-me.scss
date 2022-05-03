@@ -30,39 +30,68 @@ img {
     top: 0%;
     bottom: 0%;
 }
-
-.avatar_edit {
-    left: 0px;
-    top: 0px;
-    border-radius: 0px;
-
-}
-
-.edit {
-    font-family: Lato;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0em;
+.name_and_edit{
+    width: 600px;
+    margin-left: 250px;
+    height: 48px;
     text-align: center;
-
 }
 
 .name_and_edit span{
     height: 48px;
     width: 270px;
-    left: 0px;
-    top: 0px;
     font-family: Lato;
     font-size: 36px;
     font-weight: 700;
     line-height: 48px;
     letter-spacing: 0em;
-    text-align: left;
+    margin-left: 0px;
 }
+
+.name_and_edit a {
+    font-family: Lato;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-left: 10px;
+
+}
+
+.name_and_pronouns span{
+    margin-left: 30px;
+}
+
+.name_and_pronouns a {
+    font-family: Lato;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.avatar_edit a {
+ margin: 10px;
+ width: 150px;
+}
+
 .profile {
     padding: 10px;
+    text-align: center;
 }
+
+.profile .avatar_edit {
+    text-align: left;
+    font-size: 12px;
+}
+
+// .profile .name_and_edit  {
+//     width: 200px;
+// }
+
 .column #avatar {
     width: 280px;
 }
