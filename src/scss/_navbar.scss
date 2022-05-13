@@ -129,8 +129,9 @@
 
 .search {
     position: absolute;
-    top: 0px;
-    min-width: 1202px;
+    top: 0;
+    left: 0;
+    right: 0;
     height: 100%;
     text-align: center;
     z-index: 100;
@@ -138,11 +139,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    @media (max-width: 1300px) {
-        width: 95%;
-        min-width: inherit;
-    }
+    padding: 0 5vw;
 
     .MuiInputBase-root {
         width: 80%;
@@ -157,12 +154,27 @@
     .MuiList-padding {
         padding: 0;
     }
+    .MuiMenu-paper {
+        width: 420px;
+        margin-top: 30px;
+    }
     .MuiMenuItem-root {
         padding-top: 20px;
         padding-bottom: 20px;
+
+        &:hover {
+            cursor: default;
+        }
     }
     button {
         margin-top: 0;
+    }
+}
+
+.accountMenu {
+    .MuiMenu-paper {
+        width: 185px;
+        margin-top: 25px;
     }
 }
 

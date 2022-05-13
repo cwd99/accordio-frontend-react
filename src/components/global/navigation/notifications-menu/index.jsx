@@ -6,6 +6,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import Divider from '@material-ui/core/Divider'
 import Menu from '@material-ui/core/Menu'
 import { ListItemIcon, ListItemText } from '@material-ui/core'
+import { Link } from 'react-router-dom'
 
 const NotificationsMenu = React.forwardRef((props, ref) => {
 
@@ -33,7 +34,11 @@ const NotificationsMenu = React.forwardRef((props, ref) => {
         },
         linkText: {
             color: '#1A21B6',
-            fontSize: '16px'
+            fontSize: '16px',
+            textDecoration: 'none',
+            "&:hover": {
+                'text-decoration': 'underline'
+            }
         },
         showCaseStudyText: {
             'font-size': '13px',
@@ -65,9 +70,9 @@ const NotificationsMenu = React.forwardRef((props, ref) => {
     const submenuOpen = Boolean(submenuEl)
 
     const notificationsMenu = [
-        { 'type': 'mention', 'name': 'Gabriela Garcia', 'time': '53m', 'text': 'Re-designing the Whole Foods online shopping experience for shoppers during COVID-19' },
-        { 'type': 'publish', 'name': 'Edison Stark', 'time': '23h', 'text': "How QuietBe is empowering parents with information about their baby's sleep cycles" },
-        { 'type': 'follow', 'name': 'Lan Pham', 'time': '2d', 'text': "View Lan's profile" }
+        { 'type': 'mention', 'name': 'Gabriela Garcia', 'time': '53m', 'text': 'Re-designing the Whole Foods online shopping experience for shoppers during COVID-19', 'link': '/case-study' },
+        { 'type': 'publish', 'name': 'Edison Stark', 'time': '23h', 'text': "How QuietBe is empowering parents with information about their baby's sleep cycles", 'link': '/case-study' },
+        { 'type': 'follow', 'name': 'Lan Pham', 'time': '2d', 'text': "View Lan's profile", 'link': '/profile' }
     ]
 
     const notificationsTypeText = [
@@ -95,7 +100,9 @@ const NotificationsMenu = React.forwardRef((props, ref) => {
                                 <div className={classes.moreActions} onClick={(e) => openSubmenu(e, menu.name)}><i className="fas fa-ellipsis-h"></i></div>
                             </div>
                             <div className={classes.subText}>{notificationsTypeText.find(notif => notif.type === menu.type).text}</div>
-                            <div className={classes.linkText} nowrap="true">{menu.text}</div>
+                            <div nowrap="true">
+                                <Link to={menu.link} className={classes.linkText} onClick={props.close}>{menu.text}</Link>
+                            </div>
                             {menu.type === "mention" ? (<>
                                 <div className={classes.showCaseStudyText}>Would you like to show this case study on your profile?</div>
                                 <div>

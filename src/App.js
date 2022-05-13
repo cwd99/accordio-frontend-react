@@ -3,7 +3,7 @@ import './scss/main.scss'
 import { createTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
 
-import {Route, useLocation} from 'react-router-dom'
+import {Route, useLocation, Switch} from 'react-router-dom'
 
 import Navigation from './components/global/navigation/index'
 import Footer from './components/global/footer/index'
@@ -19,7 +19,9 @@ import LandingPage from './components/landing-page/index'
 
 import AboutMe from './components/about-me/index'
 
-import CreateCaseStudy from './components/create-case-study/create-case-study'
+import CreateCaseStudy from './components/create-case-study/CreateCaseStudy'
+import CaseStudy from './components/case-study/index'
+
 import AboutMeEdit from "./components/about-me/AboutMeEdit";
 
 const theme = createTheme({
@@ -41,22 +43,26 @@ function App() {
 
         <Navigation />
 
-        <Route exact path='/create-account' component={CreateAccount} />
-        <Route exact path='/email-verification' component={EmailVerification} />
-        <Route exact path='/complete-account' component={CompleteAccount} />
-        <Route exact path='/login-page' component={LoginPage} />
-        <Route exact path='/edit-tool' component={ImageUpload} />
-        <Route exact path='/create-case-study' component={CreateCaseStudy} />
-        <Route exact path='/about-me-edit' component={AboutMeEdit} />
-        <Route exact path='/'>
-          <LandingPage signedIn={false} /> 
-        </Route>
-        <Route exact path='/home'>
-          <LandingPage signedIn={true} />
-        </Route>
-        <Route exact path='/about-me'>
-          < AboutMe signedIn={true}/>
-        </Route>
+        <Switch>
+          <Route exact path='/create-account' component={CreateAccount} />
+          <Route exact path='/email-verification' component={EmailVerification} />
+          <Route exact path='/complete-account' component={CompleteAccount} />
+          <Route exact path='/login-page' component={LoginPage} />
+          <Route exact path='/edit-tool' component={ImageUpload} />
+          <Route exact path='/create-case-study' component={CreateCaseStudy} />
+          <Route exact path='/:user/case-studies' component={CaseStudy} />
+          <Route exact path='/:user/:title-:id(\d*\w*)' component={CaseStudy} />
+          <Route exact path='/about-me-edit' component={AboutMeEdit} />
+          <Route exact path='/'>
+            <LandingPage signedIn={false} /> 
+          </Route>
+          <Route exact path='/home'>
+            <LandingPage signedIn={true} />
+          </Route>
+          <Route exact path='/about-me'>
+            < AboutMe signedIn={true}/>
+          </Route>
+        </Switch>
 
         <Footer />
 
