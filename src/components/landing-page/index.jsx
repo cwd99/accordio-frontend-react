@@ -5,8 +5,8 @@ import lightbulb from '../../images/lightbulb.png'
 import { InputBase, IconButton } from '@material-ui/core'
 import Cta from './cta/index'
 import Filter from './Filter/index'
-import FeaturedCaseStudies from './featured-case-studies'
-import BrowseCaseStudies from './browse-case-studies'
+import FeaturedCaseStudies from '../global/featured-case-studies'
+import BrowseCaseStudies from '../global/browse-case-studies'
 import accordio from '../../images/accordio.png'
 import { Link } from 'react-router-dom'
 
@@ -24,7 +24,7 @@ function LandingPage(props) {
                             <div className="content">
                                 <h1>Welcome, Gabriela</h1>
                                 <p>Explore case studies below or start creating your own with our research-based template</p>
-                                <Link to="/create-account"><button className="blue-btn btn-filled">Create Your First Case Study</button></Link>
+                                <Link to="/create-case-study"><button className="blue-btn btn-filled">Create Your First Case Study</button></Link>
                             </div>
                         </div>
                         <div className="column">

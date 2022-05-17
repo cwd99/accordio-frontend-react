@@ -1,6 +1,6 @@
 .create-case-study {
     display: flex;
-    margin: 50px !important;
+    margin: 50px 0;
 
     .MuiTabs-indicator {
         display: none;
@@ -28,7 +28,7 @@
     }
 
     .MuiInputLabel-root, .MuiTextField-root {
-        padding-bottom: 10px;
+        padding-bottom: 12px;
         color: #3A3A3A;
         font-weight: 600;
 
@@ -66,12 +66,22 @@
         position: sticky;
         align-self: flex-start;
         top: 100px;
+        display: flex;
+        flex-direction: column;
+        grid-gap: 60px;
+        .back-arrow {
+            margin-right: 10px;
+            color: #1A21B6;
+        }
         a {
             text-decoration: none;
+            span:hover {
+                text-decoration: underline;
+                opacity: 0.75;
+            }
         }
     }
     .learn-more {
-        margin-bottom: 45px;
         color: #3A3A3A;
         span {
             margin-left: 5px;
@@ -123,7 +133,6 @@
                 cursor: pointer;
                 opacity: 0.75;
                 text-decoration: underline;
-                font-size: 17px;
                 line-height: 23px;
             }
         }
@@ -183,5 +192,12 @@
 
     & > button {
         width: calc(33% - 20px);
+    }
+}
+
+.ImageUpload {
+    button:hover {
+        text-decoration: underline;
+        opacity: 0.75;
     }
 }

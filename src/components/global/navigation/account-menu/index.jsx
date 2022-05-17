@@ -24,18 +24,19 @@ const AccountMenu = React.forwardRef((props, ref) => {
         menuItemBottom: {
             'font-size': '16px',
             'line-height': '24px',
-            'color': '#1A21B6',
             'min-height': 'auto',
             "&:hover": {
                 backgroundColor: 'transparent',
-                cursor: 'pointer',
                 opacity: 0.75
             }
         },
         menuItemLink: {
             'text-decoration': 'none',
+            'color': '#1A21B6',
             "&:hover": {
-                'text-decoration': 'underline'
+                'text-decoration': 'underline',
+                cursor: 'pointer',
+                opacity: 0.75
             }
         }
     }));
@@ -64,7 +65,7 @@ const AccountMenu = React.forwardRef((props, ref) => {
             <Divider className={props.divider} />
 
             {accountLinks.map((menu) => (
-                <Link to={menu.link} key={menu.name} className={classes.menuItemLink}>
+                <Link to={menu.link} key={menu.name} className={classes.menuItemLink} onClick={props.close}>
                     <MenuItem className={classes.menuItemBottom}>{menu.name}</MenuItem>
                 </Link>
             ))}
