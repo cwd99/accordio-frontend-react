@@ -118,16 +118,11 @@
     }
 }
 
-.featured-case-studies, .browse-case-studies {
+.featured-case-studies, .browse-case-studies, .more-from-user {
     margin: auto;
     margin-bottom: 25px;
     h3 {
         font-size: 18px;
-        margin-left: 15px;
-    }
-
-    & > * {
-        padding: 0 35px;
     }
 
     .case-study-icon {
@@ -140,15 +135,27 @@
 
     .case-study {
         flex-grow: 1;
-        margin: 15px 15px;
         position: relative;
 
-        &:hover {
-            cursor: pointer;
+        a {
+            text-decoration: none;
+            opacity: 1;
         }
-
+        
         .case-study-image {
             position: relative;
+
+            &:hover {
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background: rgba(0, 0, 0, 0.15);
+                }
+            }
         }
 
         .case-study-image img {
@@ -156,18 +163,6 @@
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
             display: block;
             background: rgba(0, 0, 0, 0.15);
-        }
-
-        &:hover {
-            .case-study-image:before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background: rgba(0, 0, 0, 0.15);
-            }
         }
 
         .category-tag {
@@ -191,16 +186,19 @@
             p {
                 margin-right: 12px;
                 line-height: 26px;
+                color: #3A3A3A;
             }
 
             .fa-bookmark {
                 margin-top: 15px;
                 margin-right: 8px;
+                cursor: pointer;
             }
         }
 
         .case-study-description {
             margin: 8px 0px;
+            color: #3A3A3A;
         }
 
         .case-study-author-role {
@@ -209,6 +207,7 @@
             line-height: 20px;
             letter-spacing: 1.75px;
             text-transform: uppercase;
+            color: #3a3a3a;
 
             .author {
                 margin-right: 10px;

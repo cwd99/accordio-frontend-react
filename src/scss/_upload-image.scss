@@ -1,0 +1,16 @@
+.show-image {
+    width: 182px;
+    height: 182px;
+    background: #F7F7F7;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.show-image img {
+    max-width: 182px;
+    max-height: 182px;
+    border-radius: 8px;
+}
