@@ -1,12 +1,18 @@
+
+
+.photo_control{
+    display: columns; 
+}
+
 .name_and_edit{
-    width: 530px;
-    margin-left: 55px;
-    height: 48px;
+    width: 270px;
+    margin-left: 0px;
+    // height: 48px;
     text-align: center;
 }
 
 .name_and_edit span{
-    height: 48px;
+    // height: 48px;
     width: 100px;
     font-family: Lato;
     font-size: 18px;
@@ -27,8 +33,9 @@
 
 }
 
-.name_and_pronouns span{
+.name_and_pronouns {
     margin-left: 30px;
+    text-align: center;
 }
 
 .name_and_pronouns a {

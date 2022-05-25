@@ -49,7 +49,9 @@ const AboutMeEdit = () => {
 
     return (
         <div className="about_me_edit">
+            <div className="name">
             <NameAndAvatar />
+            </div>
             <div className="fields">
                 <Grid container spacing={2}>
                     <Grid item xs={5}>

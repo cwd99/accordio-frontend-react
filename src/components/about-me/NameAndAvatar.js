@@ -43,7 +43,7 @@ const ImageUpload = () => {
     }
 
     return (
-    <><div style={imageUploadStyle} className="ImageUpload">
+    <><div style={imageUploadStyle} className="imageUpload">
             <ShowAvatar style={{ 'width': '182px' }} image={image} />
             <input
                 style={{ display: 'none' }}
