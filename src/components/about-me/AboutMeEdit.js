@@ -225,6 +225,57 @@ const AboutMeEdit = () => {
                         />
                         </Grid>
                 </Grid>
+                <Grid container spacing={2}>
+                    <Grid item xs={4}>
+                        <title>Connect</title>
+                        <TextField
+                            id="twitter"
+                            name="twitter"
+                            variant="outlined"
+                            label="Twitter"
+                            fullWidth
+                            value={inputs.based} 
+                            onChange={e => handleInputChange(e, 12)}
+                        />
+                        <br/>
+                        <TextField
+                            id="linkedin"
+                            name="linkedin"
+                            variant="outlined"
+                            label="LinkedIn"
+                            fullWidth
+                            value={inputs.based} 
+                            onChange={e => handleInputChange(e, 12)}
+                        />
+                        <TextField
+                            id="instagram"
+                            name="instagram"
+                            variant="outlined"
+                            label="Instagram"
+                            fullWidth
+                            value={inputs.based} 
+                            onChange={e => handleInputChange(e, 12)}
+                        />
+                        <TextField
+                            id="medium"
+                            name="medium"
+                            variant="outlined"
+                            label="Medium"
+                            fullWidth
+                            value={inputs.based} 
+                            onChange={e => handleInputChange(e, 12)}
+                        />
+                        <TextField
+                            id="spotify"
+                            name="spotify"
+                            variant="outlined"
+                            label="Spotify"
+                            fullWidth
+                            value={inputs.based} 
+                            onChange={e => handleInputChange(e, 12)}
+                        />
+                    </Grid>
+                </Grid>
             </div>
         </div>
     )
