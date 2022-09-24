@@ -1,97 +1,156 @@
-.nav_and_button{
-    height: 250px;
-    width: 198px;
-    left: 100px;
-    top: 472px;
-    border-radius: 0px;
+.about-me {
+    .profile-header {
+        margin: 50px 0;
 
-}
-.home-page .cta-section, .home-page .welcome {
-    background: #ffffff;
-    padding: 20px 70px;
-}
+        .name {
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 48px;
 
-.cta_row_container {
-    display: grid;
-    grid-template-columns: 300px auto;
-    position: flex;
-    padding: 0px;
-}
+            @media screen and (max-width: 600px) {
+                font-size: 24px;
+                line-height: 32px;
+            }
+        }
 
-img {
-    width: 184px;
-    height: 184px;
-    padding: 5px;
-    margin: 5px;
-    float: left;
-    position: relative;
-    left: 0%;
-    right: 0%;
-    top: 0%;
-    bottom: 0%;
-}
-.name_and_edit{
-    width: 600px;
-    margin-left: 250px;
-    height: 48px;
-    text-align: center;
-}
+        .bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 42px;
+            font-size: 18px;
 
-.name_and_edit span{
-    height: 48px;
-    width: 270px;
-    font-family: Lato;
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 48px;
-    letter-spacing: 0em;
-    margin-left: 0px;
-}
+            .role {
+                font-weight: 700;
+            }
+        }
 
-.name_and_edit a {
-    font-family: Lato;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0em;
-    text-align: center;
-    margin-left: 10px;
+        .links-list {
+            display: inline-flex;
+            align-items: center;
+            flex-wrap: wrap;
+            list-style: none;
+            gap: 72px;
+            padding: 0;
 
-}
+            .blue-btn {
+                margin-top: 0;
+            }
 
-.name_and_pronouns span{
-    margin-left: 30px;
-}
+            @media screen and (max-width: 600px) {
+                justify-content: space-between;
+                row-gap: 42px;
+                margin: 42px 0 0;
 
-.name_and_pronouns a {
-    font-family: Lato;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0em;
-    text-align: center;
-    margin-left: 10px;
-}
+                .blue-btn {
+                    width: 100%;
+                }
+            }
+        }
+    }
 
-.avatar_edit a {
- margin: 10px;
- width: 150px;
-}
+    .flex {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 16px;
 
-.profile {
-    padding: 10px;
-    text-align: center;
-}
+        @media screen and (max-width: 600px) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
 
-.profile .avatar_edit {
-    text-align: left;
-    font-size: 12px;
-}
+    .box {
+        box-shadow: 2px 2px 15px rgba(79, 79, 79, 0.15);
+        border-radius: 8px;
+        padding: 42px;
 
-// .profile .name_and_edit  {
-//     width: 200px;
-// }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
 
-.column #avatar {
-    width: 280px;
+        @media screen and (max-width: 600px) {
+            flex-basis: 100% !important;
+        }
+    }
+
+    .how-i-work .box:nth-of-type(3) {
+        flex: 2;
+    }
+
+    .heading {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    #social_icons {
+        padding: .5em;
+        line-height: 2.7;
+        font-size: 1.2em;
+    }
+    
+    .topmenu li { 
+        display:inline-block;
+    }
+
+    .bio, .how-i-work, .who-i-am, .connect {
+        padding-bottom: 100px;
+        align-items: stretch;
+
+        & > .heading {
+            margin-bottom: 42px;
+        }
+
+        .flex {
+            gap: 30px;
+            align-items: flex-start;
+            align-items: stretch;
+        }
+
+        .box {
+            flex: 1;
+        }
+    }
+
+    .image {
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 182px;
+            height: 182px;
+        }
+
+        @media screen and (max-width: 600px) {
+            width: 100%;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    .connect {
+        .box {
+            width: fit-content;
+
+            @media screen and (max-width: 600px) {
+                width: unset;
+            }
+        }
+
+        li:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        .social {
+            margin-left: 35px;
+        }
+    }
 }
